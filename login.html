@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+    #pos{
+            margin-left: 30%;
+        }
+    @media screen and (max-width: 600px) {
+
+        #pos
+        {
+            margin-left: 0%;
+        }
+
+        .logpos
+        {
+               width:70%;
+        }
+        }
+
+    </style>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+    </script>
+</head>
+
+<body>
+
+<!-- <div id="header"></div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.php">
+<img src="reglogo.png" alt="Logo" style="width:40px;">
+<span class="navbar-text">Buyspace</span>
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./adminform.php">Admin Login</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MyAccount
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">My Profile</a>
+          <a class="dropdown-item" href="./cart.php">My Cart</a>
+          <a class="dropdown-item" href="./logout.php">Logout</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " id="login" href="login.html"><?php echo $name_of_user; ?></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<center>
+<div class="container">
+
+    <div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4" id="pos">
+                <p class="text-center"><img src="reglogo.png" width="120" /></p>
+
+                <div class="row">
+                    <div class="box-bg-white col-md-12 col-xs-12">
+                        <h3 class="text-center">Log in with Your Buyspace Account</h3>
+                        <div class=""></div>
+
+                        <form method="POST" action="./login.php">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" id="" placeholder="Password">
+                            </div>
+                            <div class="checkbox" >
+                                <label>
+                                    <input type="checkbox"> <span>Keep me Logged in</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </form>
+                        <div class=""></div>
+                        <p class="text-center">Not a member yet? <a href="Registration.html" class="text-secondary">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
